@@ -1,0 +1,12 @@
+ion-button {
+  --box-shadow: none !important;
+  --border-width: 1px;
+  --border-radius: 4px;
+  &[expand="block"] {
+    box-sizing: content-box;
+    min-height: 50px !important;  
+  }
+}
+ion-fab-button {
+  --box-shadow: none !important;
+}

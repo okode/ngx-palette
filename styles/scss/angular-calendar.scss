@@ -1,0 +1,71 @@
+:root {
+  --cal-border-color: #eee;
+  --cal-border-width: 0px;
+  --cal-header-text-color: #aaa;
+  --cal-events-color: var(--ion-color-medium);
+  --cal-day-color: var(--ion-color-medium-dark);
+  --cal-weekend-day-color: var(--ion-color-primary);
+  --cal-today-bg-color: var(--ion-color-primary);
+  --cal-today-text-color: #fff;
+}
+mwl-calendar-month-view {
+  *:hover {
+    background: inherit !important;
+  }
+  .cal-month-view .cal-header .cal-cell {
+    padding: 25px 5px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: var(--cal-header-text-color) !important;
+  }
+  .cal-month-view .cal-day-cell {
+    min-height: 55px !important;
+    cursor: pointer !important;
+    justify-content: center !important;
+    align-items: center !important;
+    &.cal-today {
+      background: transparent !important;
+      .cal-cell-top .cal-day-number {
+        background: var(--cal-today-bg-color) !important;
+        color: var(--cal-today-text-color) !important;
+        font-weight: 900;
+        opacity: 1 !important;
+      }
+    } 
+    .cal-cell-top {
+      min-height: 30px !important;
+      .cal-day-badge {
+        display: none !important; 
+      }  
+      .cal-day-number {
+        margin: 0 !important;
+        text-align: center !important;
+        width: 30px !important;
+        height: 30px !important;
+        line-height: 30px !important;
+        border-radius: 50% !important;
+        font-size: 16px !important;
+        color: var(--cal-day-color) !important;
+      }
+    }
+    .cal-events {
+      margin-bottom: 5px !important;
+      margin-top: 2px !important;
+      justify-content: center !important;
+      align-items: flex-start !important;
+      .cal-event {
+        background-color: var(--cal-events-color) !important;
+        width: 6px !important;
+        height: 6px !important;
+        pointer-events: none !important;
+      }
+    }
+  }
+  .cal-weekend .cal-day-number {
+    color: var(--cal-weekend-day-color) !important;
+  }
+  .cal-cell, .cal-cell-row, .cal-days {
+    border-color: var(--cal-border-color) !important;
+    border-width: var(--cal-border-width) !important;
+  }
+}

@@ -1,0 +1,30 @@
+:root {
+  .ion-color-white {
+    --ion-color-base: #ffffff;
+    --ion-color-base-rgb: 255,255,255;
+    --ion-color-contrast: #4e4e4e;
+    --ion-color-contrast-rgb: 34,36,40;
+    --ion-color-shade: #c5c5c5;
+    --ion-color-tint: #c5c5c5;
+  }
+  //
+  --ion-color-base: #ffffff;
+  --ion-text-color: var(--ion-color-dark);
+  // Custom
+  --content-bg: #ffffff;
+  --content-padding: 18px;
+  --input-focus-color: rgba(var(--ion-color-secondary-rgb), .5);
+  --input-error-color: var(--ion-color-primary);
+  --item-border-color: var(--ion-color-medium-light);
+}
+
+@import 'scss/ionic-variables.scss';
+@import 'scss/header.scss';
+@import 'scss/footer.scss';
+@import 'scss/content.scss';
+@import 'scss/forms.scss';
+@import 'scss/cards.scss';
+@import 'scss/grids.scss';
+@import 'scss/dialogs.scss';
+@import 'scss/buttons.scss';
+@import 'scss/angular-calendar.scss';

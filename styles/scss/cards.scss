@@ -1,0 +1,57 @@
+ion-content[custom-palette] {
+  /* Main */
+  ion-card {
+    margin: 10px 0px 20px 0px !important;
+    ion-item {
+      --border-color: rgba(0, 0, 0, .1) !important;
+      &:last-child {
+        --border-color: transparent !important;
+      }
+      &[no-ellipsis] {
+        text-overflow: inherit;
+        white-space: inherit;
+      }
+    }
+    ion-card-content {
+      padding: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  /* flat, flat-light, flat-dark */
+  ion-card[flat] {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  ion-card[rect] {
+    border-radius: 2px !important;
+  }
+  ion-card[translucent] {
+    background: rgba(var(--ion-color-base-rgb), .2);
+    color: var(--ion-color-shade);
+    &.ion-color-warning {
+      background: rgba(var(--ion-color-base-rgb), .4);
+      color: var(--ion-color-warning-contrast);
+    }
+  }
+  /* Basic content with icon */
+  ion-card > ion-icon {
+    position: absolute;
+    font-size: 30px;
+    line-height: 30px;
+    top: 15px;
+    left: 15px;
+    & + ion-card-content {
+      padding-left: 60px;
+    }
+  }
+  ion-card[bordered] {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  ion-card[bordered-top] {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  ion-card[bordered-bottom] {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
