@@ -27,7 +27,13 @@ Add `@okode/ngx-palette` path to your `tsconfig.json` file:
 }
 ```
 
-Register `OkodeNgxCustomPaletteModule` and `OkodeNgxDatepickerModule` in your `app.module.ts`:
+Import main style in `src/global.scss`:
+
+```typescript
+@import '~@okode/ngx-palette/styles/style.scss';
+```
+
+Register `OkodeNgxCustomPaletteModule` in your `app.module.ts`:
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -41,8 +47,7 @@ import { Device } from '@ionic-native/device/ngx';
   imports: [
     IonicStorageModule.forRoot(), // Required
     HttpClientModule, // Required
-    OkodeNgxCustomPaletteModule.forRoot(),
-    OkodeNgxDatepickerModule.forRoot()
+    OkodeNgxCustomPaletteModule
     ...
   ]
 })
